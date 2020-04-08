@@ -1,0 +1,14 @@
+Name: Insert dashes to 80
+Description: Inserts insert dashes until column 80.
+Binding: insert_dashes
+Interactive: false
+
+Name: Reload RStudio
+Description: Reload RStudio and kill all open terminals
+Binding: reload_project
+Interactive: false
+
+Name: Open GitHub
+Description: Open the GitHub repo of the current project
+Binding: open_github
+Interactive: false
