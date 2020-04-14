@@ -3,3 +3,4 @@
 export(insert_dashes)
 export(open_github)
 export(reload_project)
+export(view_object)
