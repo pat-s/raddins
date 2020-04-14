@@ -12,8 +12,8 @@ view_object <- function(context = NULL) {
     return()
   }
   cli::cli_alert("Viewing object {.code {target}} in RStudio.")
-  target = get(target)
-  View(target)
+  target_view = get(target)
+  View(target_view, title = target)
 }
 
 # borrowed from drake: https://github.com/ropensci/drake/blob/85ea21fc7d3ab2a0b80b3206adfece5be698c9c9/R/rstudio.R
