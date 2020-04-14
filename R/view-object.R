@@ -6,11 +6,13 @@
 view_object <- function(context = NULL) {
   requireNamespace("rstudioapi", quietly = TRUE)
   context <- rstudioapi::getActiveDocumentContext()
+  #context <- rstudioapi::getActiveDocumentContext()
   target <- rs_get_symbol_at_cursor(context)
   if (is.null(target)) {
     return()
   }
   cli::cli_alert("Viewing object {.code {target}} in RStudio.")
+  target = get(target)
   View(target)
 }
 

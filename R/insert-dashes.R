@@ -8,8 +8,6 @@ insert_dashes <- function() {
   # Get active document context
   context <- rstudioapi::getActiveDocumentContext()
 
-  iris <- data(iris)
-
   # Get column of cursor position
   current_col <- context$selection[[1]]$range[[1]][[2]]
 
@@ -18,5 +16,4 @@ insert_dashes <- function() {
 
   # Insert dashes
   rstudioapi::insertText(paste0(strrep("-", num_dashes)))
-
 }
