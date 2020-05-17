@@ -17,3 +17,8 @@ Name: View object
 Description: View the object under cursor in RStudio
 Binding: view_object
 Interactive: false
+
+Name: Git push
+Description: Push files via git
+Binding: git_push
+Interactive: false
