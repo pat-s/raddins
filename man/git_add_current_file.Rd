@@ -9,3 +9,4 @@ git_add_current_file()
 \description{
 Stage the current file
 }
+\keyword{internal}

@@ -2,10 +2,11 @@
 % Please edit documentation in R/git.R
 \name{git_commit_all}
 \alias{git_commit_all}
-\title{git status}
+\title{Add and commit all modified files in the index}
 \usage{
 git_commit_all()
 }
 \description{
-git status
+Add and commit all modified files in the index
 }
+\keyword{internal}

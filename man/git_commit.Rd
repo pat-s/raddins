@@ -9,3 +9,4 @@ git_commit()
 \description{
 Commit all staged files
 }
+\keyword{internal}

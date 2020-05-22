@@ -2,6 +2,7 @@
 #'
 #' Calls `gert::git_push()`
 #'
+#' @keywords internal
 #' @export
 git_push <- function() {
 
@@ -10,6 +11,7 @@ git_push <- function() {
 
 #' Stage the current file
 #'
+#' @keywords internal
 #' @export
 git_add_current_file <- function() {
 
@@ -19,11 +21,13 @@ git_add_current_file <- function() {
   proj_name <- basename(getwd())
   # create relative path
   path_relative <- strsplit(file, paste0(proj_name, "/"))[[1]][2]
+  cli::cli_text("git: Staging {.file {path_relative}}")
   gert::git_add(path_relative)
 }
 
 #' Stage and commit the current file
 #'
+#' @keywords internal
 #' @export
 git_commit_current_file <- function() {
 
@@ -35,17 +39,21 @@ git_commit_current_file <- function() {
   # create relative path
   path_relative <- strsplit(file, paste0(proj_name, "/"))[[1]][2]
 
-  commit_message <- readline(prompt = "Enter git commit message: ")
+  commit_message = rstudioapi::showPrompt("", "Enter git commit message")
+  cli::cli_text("git: Staging {.file {path_relative}}")
+  cli::cli_text("git: Committing {.file {path_relative}} with message '{commit_message}'.")
   gert::git_add(path_relative)
   gert::git_commit(message = commit_message)
 }
 
 #' Commit all staged files
 #'
+#' @keywords internal
 #' @export
 git_commit <- function() {
 
-  commit_message <- readline(prompt = "Enter git commit message: ")
+  commit_message = rstudioapi::showPrompt("", "Enter git commit message")
+  cli::cli_text("git: Committing {.file {path_relative}} with message '{commit_message}'.")
   gert::git_commit(message = commit_message)
 }
 
@@ -58,8 +66,10 @@ git_status <- function() {
 
 #' Add and commit all modified files in the index
 #'
+#' @keywords internal
 #' @export
 git_commit_all <- function() {
-  commit_message <- readline(prompt = "Enter git commit message: ")
+  commit_message = rstudioapi::showPrompt("", "Enter git commit message")
+  cli::cli_text("git: Committing {.file {path_relative}} with message '{commit_message}'.")
   gert::git_commit_all(message = commit_message)
 }

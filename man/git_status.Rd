@@ -2,10 +2,10 @@
 % Please edit documentation in R/git.R
 \name{git_status}
 \alias{git_status}
-\title{git status}
+\title{Show git status}
 \usage{
 git_status()
 }
 \description{
-git status
+Show git status
 }

@@ -9,3 +9,4 @@ git_commit_current_file()
 \description{
 Stage and commit the current file
 }
+\keyword{internal}

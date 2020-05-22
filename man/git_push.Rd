@@ -9,3 +9,4 @@ git_push()
 \description{
 Calls \code{gert::git_push()}
 }
+\keyword{internal}
