@@ -23,7 +23,6 @@
 
 
 
-
 #' Git Push
 #'
 #' Calls `gert::git_push()`
@@ -40,7 +39,7 @@ git_push <- function() {
 #' @keywords internal
 #' @export
 git_add_current_file <- function() {
-
+test
   # Get active document context
   file <- rstudioapi::getActiveDocumentContext()$path
   # get current project name
