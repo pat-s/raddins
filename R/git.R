@@ -1,3 +1,29 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #' Git Push
 #'
 #' Calls `gert::git_push()`
@@ -21,7 +47,7 @@ git_add_current_file <- function() {
   proj_name <- basename(getwd())
   # create relative path
   path_relative <- strsplit(file, paste0(proj_name, "/"))[[1]][2]
-  cli::cli_text("git: Staging {.file {path_relative}}")
+  cli::cli_text("{.pkg git}: Staging {.file {path_relative}}")
   gert::git_add(path_relative)
 }
 
@@ -40,8 +66,9 @@ git_commit_current_file <- function() {
   path_relative <- strsplit(file, paste0(proj_name, "/"))[[1]][2]
 
   commit_message = rstudioapi::showPrompt("", "Enter git commit message")
-  cli::cli_text("git: Staging {.file {path_relative}}")
-  cli::cli_text("git: Committing {.file {path_relative}} with message '{commit_message}'.")
+  cli::cli_text("{.pkg git}: Staging {.file {path_relative}}")
+  cli::cli_text("{.pkg git}: Committing {.file {path_relative}} with message
+                '{.pkg {commit_message}}'.")
   gert::git_add(path_relative)
   gert::git_commit(message = commit_message)
 }
@@ -53,7 +80,19 @@ git_commit_current_file <- function() {
 git_commit <- function() {
 
   commit_message = rstudioapi::showPrompt("", "Enter git commit message")
-  cli::cli_text("git: Committing {.file {path_relative}} with message '{commit_message}'.")
+  files = gert::git_status()$file
+  commit_info = function() {
+    cli::cli_par()
+    cli::cli_text("{.pkg git}: Committing")
+    cli::cli_end()
+    cli::cli_par()
+    cli::cli_ul(files)
+    cli::cli_end()
+    cli::cli_par()
+    cli::cli_text("with message '{.pkg {commit_message}}'.")
+    cli::cli_end()
+  }
+  commit_info()
   gert::git_commit(message = commit_message)
 }
 
@@ -70,6 +109,18 @@ git_status <- function() {
 #' @export
 git_commit_all <- function() {
   commit_message = rstudioapi::showPrompt("", "Enter git commit message")
-  cli::cli_text("git: Committing {.file {path_relative}} with message '{commit_message}'.")
+  files = gert::git_status()$file
+  commit_info = function() {
+  cli::cli_par()
+  cli::cli_text("{.pkg git}: Committing")
+  cli::cli_end()
+  cli::cli_par()
+  cli::cli_ul(files)
+  cli::cli_end()
+  cli::cli_par()
+  cli::cli_text("with message '{.pkg {commit_message}}'.")
+  cli::cli_end()
+  }
+  commit_info()
   gert::git_commit_all(message = commit_message)
 }
