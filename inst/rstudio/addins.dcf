@@ -18,7 +18,22 @@ Description: View the object under cursor in RStudio
 Binding: view_object
 Interactive: false
 
-Name: Git push
+Name: git push
 Description: Push files via git
 Binding: git_push
+Interactive: false
+
+Name: git add
+Description: Stages the current file
+Binding: git_add_current_file
+Interactive: false
+
+Name: git add and commit
+Description: Stages and commits the current file
+Binding: git_commit_current_file
+Interactive: false
+
+Name: git commit
+Description: Commits all stages files
+Binding: git_commit
 Interactive: false
