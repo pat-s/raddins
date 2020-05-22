@@ -28,7 +28,7 @@ Description: Stages the current file
 Binding: git_add_current_file
 Interactive: false
 
-Name: git add and commit
+Name: git add and commit current file
 Description: Stages and commits the current file
 Binding: git_commit_current_file
 Interactive: false
@@ -36,4 +36,14 @@ Interactive: false
 Name: git commit
 Description: Commits all stages files
 Binding: git_commit
-Interactive: false
+Interactive: true
+
+Name: git status
+Description: Show current git status
+Binding: git_status
+Interactive: true
+
+Name: git add and commit all
+Description: Stages and adds all files in the index
+Binding: git_commit_all
+Interactive: true

@@ -47,3 +47,18 @@ git_commit <- function() {
   commit_message <- readline(prompt = "Enter git commit message: ")
   gert::git_commit(message = commit_message)
 }
+
+#' git status
+#'
+#' @export
+git_status <- function() {
+  gert::git_status()
+}
+
+#' git status
+#'
+#' @export
+git_commit_all <- function() {
+  commit_message <- readline(prompt = "Enter git commit message: ")
+  gert::git_commit_all(message = commit_message)
+}

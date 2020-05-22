@@ -2,10 +2,10 @@
 % Please edit documentation in R/git.R
 \name{git_commit_current_file}
 \alias{git_commit_current_file}
-\title{Commit the current file}
+\title{Stage and commit the current file}
 \usage{
 git_commit_current_file()
 }
 \description{
-Commit the current file
+Stage and commit the current file
 }

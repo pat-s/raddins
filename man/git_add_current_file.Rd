@@ -2,10 +2,10 @@
 % Please edit documentation in R/git.R
 \name{git_add_current_file}
 \alias{git_add_current_file}
-\title{Stages the current file}
+\title{Stage the current file}
 \usage{
 git_add_current_file()
 }
 \description{
-Stages the current file
+Stage the current file
 }
