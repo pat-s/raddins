@@ -16,7 +16,7 @@ git_add_current_file <- function() {
   # Get active document context
   file <- rstudioapi::getActiveDocumentContext()$path
   # get current project name
-  proj_name <- basename(suppressMessages(usethis::proj_path()))
+  proj_name <- basename(getwd())
   # create relative path
   path_relative <- strsplit(file, paste0(proj_name, "/"))[[1]][2]
   gert::git_add(path_relative)
@@ -30,7 +30,8 @@ git_commit_current_file <- function() {
   # Get active document context
   file <- rstudioapi::getActiveDocumentContext()$path
   # get current project name
-  proj_name <- basename(suppressMessages(usethis::proj_path()))
+
+  proj_name <- basename(getwd())
   # create relative path
   path_relative <- strsplit(file, paste0(proj_name, "/"))[[1]][2]
 
@@ -48,14 +49,14 @@ git_commit <- function() {
   gert::git_commit(message = commit_message)
 }
 
-#' git status
+#' Show git status
 #'
 #' @export
 git_status <- function() {
   gert::git_status()
 }
 
-#' git status
+#' Add and commit all modified files in the index
 #'
 #' @export
 git_commit_all <- function() {

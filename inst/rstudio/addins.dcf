@@ -19,31 +19,31 @@ Binding: view_object
 Interactive: false
 
 Name: git push
-Description: Push files via git
+Description: Push files via `gert::git_push()`
 Binding: git_push
 Interactive: false
 
 Name: git add
-Description: Stages the current file
+Description: Stages the current file via `gert::git_add()`
 Binding: git_add_current_file
 Interactive: false
 
 Name: git add and commit current file
-Description: Stages and commits the current file
+Description: Stages and commits the current file via `gert::git_add()` and `gert::git_commit()`
 Binding: git_commit_current_file
 Interactive: false
 
 Name: git commit
-Description: Commits all stages files
+Description: Commits all staged files via `gert::git_commit()`
 Binding: git_commit
 Interactive: true
 
 Name: git status
-Description: Show current git status
+Description: Show current git status via `gert::git_status()`
 Binding: git_status
 Interactive: true
 
-Name: git add and commit all
-Description: Stages and adds all files in the index
+Name: git add and commit all modified files
+Description: Stages and commits all modified files in the index via `gert::git_commit_all()`
 Binding: git_commit_all
 Interactive: true
