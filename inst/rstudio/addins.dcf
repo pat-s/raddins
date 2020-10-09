@@ -23,6 +23,11 @@ Description: Push files via `gert::git_push()`
 Binding: git_push
 Interactive: false
 
+Name: git pull
+Description: Push files via `gert::git_pull()`
+Binding: git_pull
+Interactive: false
+
 Name: git add
 Description: Stages the current file via `gert::git_add()`
 Binding: git_add_current_file

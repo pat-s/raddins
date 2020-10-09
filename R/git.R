@@ -1,28 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #' Git Push
 #'
 #' Calls `gert::git_push()`
@@ -32,6 +7,17 @@
 git_push <- function() {
 
   gert::git_push()
+}
+
+#' Git Pull
+#'
+#' Calls `gert::git_pull()`
+#'
+#' @keywords internal
+#' @export
+git_pull <- function() {
+
+  gert::git_pull(prune = TRUE)
 }
 
 #' Stage the current file
