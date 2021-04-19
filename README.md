@@ -9,6 +9,7 @@ The main purpose of addins is to use them in combination with keybindings.
 | Name                | Effect                                                                                     | Example Keybinding |
 |---------------------|--------------------------------------------------------------------------------------------|--------------------|
 | View Object         | Opens the object under the cursor in RStudio                                               | CTRL + Shift + V   |
+| Open GitHub         | Opens the GitHub repo of the active project (if there is one)                              | CMD + Shift + G    |
 | git pull            | Pulls from git (and prunes branches)                                                       | Alt + Shift + P    |
 | git push            | Pushes to git                                                                              | CTRL + Shift + P   |
 | git add             | Stages the currently active file                                                           | CTRL + Shift + A   |
