@@ -32,3 +32,9 @@ Please note that the 'raddins' project is released with a [Contributor Code of C
 The "Insert dashes to 80" addin was borrowed from [mine-cetinkaya-rundel/addmins](https://github.com/mine-cetinkaya-rundel/addmins):
 
 `rs_get_symbol_at_cursor` was borrowed from [{drake}](https://github.com/ropensci-books/drake).
+
+## Syncing RStudio settings across machines/RStudio workbench installs
+
+If you find yourself working on different machines or in RStudio Workbench instances, you often want to have the same settings across all of these RStudio instances.
+
+Copying multiple config files can be tiring - have a look at [pat-s/rstudioSettings](https://github.com/pat-s/rstudioSettings) for a programmatic approach.
