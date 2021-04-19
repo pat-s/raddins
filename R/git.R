@@ -5,18 +5,16 @@
 #' @keywords internal
 #' @export
 git_push <- function() {
-
   gert::git_push()
 }
 
 #' Git Pull
 #'
-#' Calls `gert::git_pull()`
+#' Calls `gert::git_pull(prune = TRUE)`
 #'
 #' @keywords internal
 #' @export
 git_pull <- function() {
-
   gert::git_pull(prune = TRUE)
 }
 
@@ -25,9 +23,8 @@ git_pull <- function() {
 #' @keywords internal
 #' @export
 git_add_current_file <- function() {
-test
   # Get active document context
-  file <- rstudioapi::getActiveDocumentContext()$path
+  file <- rstudioapi::getSourceEditorContext()$path
   # get current project name
   proj_name <- basename(getwd())
   # create relative path
@@ -43,7 +40,7 @@ test
 git_commit_current_file <- function() {
 
   # Get active document context
-  file <- rstudioapi::getActiveDocumentContext()$path
+  file <- rstudioapi::getSourceEditorContext()$path
   # get current project name
 
   proj_name <- basename(getwd())

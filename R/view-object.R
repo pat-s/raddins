@@ -5,7 +5,7 @@
 #' @export
 view_object <- function(context = NULL) {
   requireNamespace("rstudioapi", quietly = TRUE)
-  context <- rstudioapi::getActiveDocumentContext()
+  context <- rstudioapi::getSourceEditorContext()
   #context <- rstudioapi::getActiveDocumentContext()
   target <- rs_get_symbol_at_cursor(context)
   if (is.null(target)) {
@@ -36,9 +36,8 @@ rs_get_symbol_at_cursor <- function(context) {
       cursor_column <= match_ends
   )
   if (length(match_index) == 0) {
-    cli_msg(
-      "Could not find object name at cursor position.",
-      cli_sym = cli::col_red(cli::symbol$cross)
+    cli::cli_alert_warning(
+      "Could not find object name at cursor position."
     )
     return(NULL)
   }

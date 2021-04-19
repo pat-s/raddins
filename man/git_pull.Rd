@@ -7,6 +7,6 @@
 git_pull()
 }
 \description{
-Calls \code{gert::git_pull()}
+Calls \code{gert::git_pull(prune = TRUE)}
 }
 \keyword{internal}
