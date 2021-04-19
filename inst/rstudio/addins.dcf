@@ -8,11 +8,6 @@ Description: Reload RStudio and kill all open terminals
 Binding: reload_project
 Interactive: false
 
-Name: Open GitHub
-Description: Open the GitHub repo of the current project
-Binding: open_github
-Interactive: false
-
 Name: View object
 Description: View the object under cursor in RStudio
 Binding: view_object
